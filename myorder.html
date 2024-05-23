@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="https://progressier.app/ru12bQeT619SrNAknRPR/progressier.json"/>
+    <script defer src="https://progressier.app/ru12bQeT619SrNAknRPR/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essentials - Order Page </title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/myorder.css" type="text/css">
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+
+    <link rel="stylesheet" href="./css/myabout.css" type="text/css">
+    <link rel="icon" type="image/jpg" href="./images/mylogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./images/mylogo.png" alt="Company Logo" class="logo">
+            <h1><a href="index.html">Essentials</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./myabout.html">About Us</a></li>
+                <li><a href="./myproducts.html">Products</a></li>
+                <li><a href="./myorder.html">Order</a></li>
+                <li><a href="./myloyalty.html">Loyalty Registration</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="button" class="search-button"><i class='bx bx-search'></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="order-section">
+            <h2>Order Form</h2>
+            <form id="order-form">
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <label for="customer-name">Name:</label>
+                    <input type="text" id="customer-name" name="customer-name" required>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Product Selection</legend>
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="groceries">Vegetables</option>
+                        <option value="household">Dairy Products</option>
+                        <option value="electronics">Cosmetics</option>
+                        <option value="clothing">Skincare</option>
+                    </select>
+
+                    <label for="product">Product:</label>
+                    <select id="product" name="product" required>
+                        <option value="product1">Product 1</option>
+                        <option value="product2">Product 2</option>
+                        <option value="product3">Product 3</option>
+                    </select>
+
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+                    <label for="payment">Payment Method:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank-transfer">Bank Transfer</option>
+                    </select>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit">Add to Cart</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+        <!-- Add this button after the cart table -->
+<section class="cart-section">
+    <h2>Shopping Cart</h2>
+    <div class="cart-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Payment</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Birinjal</td>
+                    <td>Vegetables</td>
+                    <td>2</td>
+                    <td>Credit Card</td>
+                    <td><button class="remove">Remove</button></td>
+                </tr>
+                <!-- Additional products will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Add a button to proceed with payment -->
+    <div class="payment-actions">
+        <button class="pay-now">Pay Now</button>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2><span>Essentials</span></h2>
+                <p>Your one-stop shop for all your grocery needs. Fresh, high-quality products delivered to your door.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Category</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./myabout.html">About Us</a></li>
+                    <li><a href="./myproducts.html">Products</a></li>
+                    <li><a href="./myorder.html">Order</a></li>
+                    <li><a href="./myloyalty.html">Loyalty Registration</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> +94 81 222 1122</p>
+                <p><i class="fas fa-envelope"></i> essentials.grocery@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Essentials | Designed by Thalib Shibly</p>
+        </div>
+    </footer>
+</body>
+</html>
